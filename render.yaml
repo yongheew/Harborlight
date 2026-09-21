@@ -1,0 +1,25 @@
+# Paid single-instance service with persistent SQLite storage.
+# Review the Render price before creating this service. No deployment occurs from this file alone.
+services:
+  - type: web
+    name: harborlight
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    disk:
+      name: harborlight-data
+      mountPath: /app/var
+      sizeGB: 1
+    envVars:
+      - key: HARBORLIGHT_DATA_DIR
+        value: /app/var
+      - key: HARBORLIGHT_USERNAME
+        value: judge
+      - key: HARBORLIGHT_PASSWORD
+        generateValue: true
+      - key: HARBORLIGHT_SEED_DEMO
+        value: "1"
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_API_KEY
+        sync: false

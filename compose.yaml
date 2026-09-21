@@ -1,0 +1,15 @@
+services:
+  harborlight:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      HARBORLIGHT_PASSWORD: ${HARBORLIGHT_PASSWORD:-}
+      HARBORLIGHT_USERNAME: ${HARBORLIGHT_USERNAME:-judge}
+    volumes:
+      - harborlight-data:/app/var
+    restart: unless-stopped
+volumes:
+  harborlight-data:

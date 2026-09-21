@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+var/
+results/
+data/
+ground_truth.json
+*.sqlite3*
+.pytest_cache/
