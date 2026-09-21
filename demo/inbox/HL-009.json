@@ -1,0 +1,7 @@
+{
+  "email_id": "HL-009",
+  "from": "operations@example.test",
+  "subject": "Weekly operations notice",
+  "body": "The warehouse will close at 5pm on Friday. This is an operational update; no documents require checking.",
+  "attachments": []
+}

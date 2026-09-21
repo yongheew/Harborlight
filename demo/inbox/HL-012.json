@@ -1,0 +1,10 @@
+{
+  "email_id": "HL-012",
+  "from": "operations@example.test",
+  "subject": "Verify draft - weight discrepancy suspected",
+  "body": "Please check the SI and draft BL before finalizing. The gross weight may have been transcribed incorrectly.",
+  "attachments": [
+    "attachments/HL-012_SI.xlsx",
+    "attachments/HL-012_BL.docx"
+  ]
+}

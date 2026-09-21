@@ -1,0 +1,9 @@
+{
+  "email_id": "HL-005",
+  "from": "operations@example.test",
+  "subject": "Draft BL verification",
+  "body": "Please compare the draft BL against the SI. I have attached the instruction; the carrier's draft will follow.",
+  "attachments": [
+    "attachments/HL-005_SI.txt"
+  ]
+}

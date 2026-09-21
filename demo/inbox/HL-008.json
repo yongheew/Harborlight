@@ -1,0 +1,7 @@
+{
+  "email_id": "HL-008",
+  "from": "operations@example.test",
+  "subject": "Invoice amount clarification",
+  "body": "Could you explain the detention charges on this invoice? The billed amount differs from our quote.",
+  "attachments": []
+}

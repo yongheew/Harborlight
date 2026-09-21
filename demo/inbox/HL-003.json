@@ -1,0 +1,10 @@
+{
+  "email_id": "HL-003",
+  "from": "operations@example.test",
+  "subject": "Check draft before release",
+  "body": "Compare our SI with the draft bill of lading. We need the weight confirmed from operations.",
+  "attachments": [
+    "attachments/HL-003_SI.docx",
+    "attachments/HL-003_BL.docx"
+  ]
+}

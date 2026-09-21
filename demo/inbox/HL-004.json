@@ -1,0 +1,10 @@
+{
+  "email_id": "HL-004",
+  "from": "operations@example.test",
+  "subject": "SI and BL for comparison",
+  "body": "Verify the attached draft BL against the SI. Please check whether the correct file was attached.",
+  "attachments": [
+    "attachments/HL-004_SI.txt",
+    "attachments/HL-004_BL.txt"
+  ]
+}

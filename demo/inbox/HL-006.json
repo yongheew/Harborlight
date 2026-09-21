@@ -1,0 +1,10 @@
+{
+  "email_id": "HL-006",
+  "from": "operations@example.test",
+  "subject": "Scanned BL - verify document",
+  "body": "Please compare this scanned draft BL with the shipping instruction.",
+  "attachments": [
+    "attachments/HL-006_SI.txt",
+    "attachments/HL-006_BL.pdf"
+  ]
+}

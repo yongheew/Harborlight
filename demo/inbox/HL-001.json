@@ -1,0 +1,10 @@
+{
+  "email_id": "HL-001",
+  "from": "operations@example.test",
+  "subject": "Draft BL - closing today",
+  "body": "Please compare the attached draft BL against our shipping instruction. The vessel cut-off is today.",
+  "attachments": [
+    "attachments/HL-001_SI.pdf",
+    "attachments/HL-001_BL.pdf"
+  ]
+}

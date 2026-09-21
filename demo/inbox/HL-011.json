@@ -1,0 +1,10 @@
+{
+  "email_id": "HL-011",
+  "from": "operations@example.test",
+  "subject": "Check the attached draft BL",
+  "body": "Please compare the attached bill of lading with our shipping instruction.",
+  "attachments": [
+    "attachments/HL-011_SI.txt",
+    "attachments/HL-011_BL.pdf"
+  ]
+}
