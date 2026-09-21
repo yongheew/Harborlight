@@ -190,6 +190,21 @@ FastAPI interactive endpoint documentation is available at `/docs`. The [five-mi
 
 The brief also requires a public prototype, repository link, documentation/deck link and a video of at most five minutes. Code and documentation are packaged here; publishing them and supplying team details are separate external steps. Do not claim cloud integration was demonstrated until the actual deployment/provider run is tested. Read [SUBMISSION.md](docs/SUBMISSION.md).
 
+## Challenges faced
+
+* **Mixed document formats and unreliable scans:** Shipping documents can arrive as text files, digital PDFs, Word documents, Excel sheets, image files, or scanned PDFs. Harborlight uses format-specific readers and routes missing, unreadable, conflicting, or low-confidence values to human review rather than guessing a comparison result.
+* **Separating real email intent from misleading context:** Email subjects, quoted history, signatures, and forwarded messages can conflict with the latest request. The solution combines a local Naive Bayes classifier with transparent intent rules so that the current message is prioritised.
+* **Maintaining evidence and a safe review process:** A discrepancy must be traceable to the original SI and draft BL. The system retains source excerpts, original and normalised values, extraction methods, document hashes, and a versioned audit trail for human corrections and retries.
+* **Deployment and persistence constraints:** The prototype uses SQLite for a simple, portable workflow. Public free-tier hosting can restart or clear temporary storage, so production use would require persistent storage and a shared database.
+
+## Future roadmap
+
+* Move persistence from SQLite to a managed database and store original attachments in object storage so cases, reviews, and audit history survive redeployments and support multiple users.
+* Add role-based access, reviewer assignment, notification workflows, and integration with a monitored email inbox.
+* Expand the evaluation set with more real-world layouts, languages, handwritten scans, and multi-shipment documents; use the results to improve extraction and classification coverage.
+* Add a shipping-port reference dataset, stronger document-pairing logic, and more configurable business rules for different operators and carriers.
+* Provide operational analytics, such as recurring discrepancy trends, reviewer turnaround time, and document-quality metrics.
+
 ## Limits and next validation
 
 This is a single-instance hackathon prototype, not an authenticated multi-tenant shipping platform. The optional shared password does not prove reviewer identity. SQLite and source blobs need a persistent volume; multiple replicas need a shared database/object store and a worker queue. Reader byte/page/cell limits do not replace a separate sandbox for hostile documents. The local hash chain detects partial changes but is not externally anchored or administrator-proof.
