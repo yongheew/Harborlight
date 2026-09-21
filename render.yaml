@@ -13,7 +13,7 @@ services:
       - key: HARBORLIGHT_USERNAME
         value: judge
       - key: HARBORLIGHT_PASSWORD
-        generateValue: true
+        value: ""
       - key: HARBORLIGHT_SEED_DEMO
         value: "1"
       - key: OPENAI_MODEL
