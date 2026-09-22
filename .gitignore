@@ -8,3 +8,6 @@ data/
 ground_truth.json
 *.sqlite3*
 .pytest_cache/
+
+# Include the approved, preprocessed 520-case baseline in the Render image.
+!seed/harborlight.sqlite3

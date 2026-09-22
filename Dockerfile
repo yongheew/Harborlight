@@ -9,4 +9,4 @@ COPY --chown=harborlight:harborlight . .
 USER harborlight
 EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:'+__import__('os').environ.get('PORT','8000')+'/api/health',timeout=3)"
-CMD ["python", "run.py"]
+CMD ["python", "bootstrap.py"]
