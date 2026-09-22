@@ -15,6 +15,6 @@ services:
       - key: HARBORLIGHT_PASSWORD
         value: ""
       - key: HARBORLIGHT_SEED_DEMO
-        value: "1"
+        value: "0"
       - key: OPENAI_MODEL
         value: gpt-4o-mini
